@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@layer utilities {
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
+
+.text-gold-500 {
+  color: #d4af37;
+}
+
+.bg-gold-500 {
+  background-color: #d4af37;
+}
+
+.border-gold-500 {
+  border-color: #d4af37;
+}
+
+.shadow-gold {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}

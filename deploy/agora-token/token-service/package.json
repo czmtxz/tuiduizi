@@ -1,0 +1,10 @@
+{
+  "name": "tuiduizi-agora-token-service",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.48.1",
+    "agora-access-token": "^2.0.4"
+  }
+}
+

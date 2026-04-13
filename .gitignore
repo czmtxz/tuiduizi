@@ -1,0 +1,40 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+public/vendor/tencent-gme-sdk.js
+.certs/
+.vercel/
+
+# Env files (never commit real secrets)
+.env
+.env.*
+!.env.example
+!.env.*.example
+deploy/**/.env
+deploy/**/.env.*
+!deploy/**/.env.example
+!deploy/**/.env.*.example
+
+# Supabase temp files
+supabase/.temp/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

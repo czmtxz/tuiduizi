@@ -1,0 +1,8 @@
+{$LIVEKIT_DOMAIN} {
+  reverse_proxy livekit:7880
+}
+
+{$TOKEN_DOMAIN} {
+  reverse_proxy voice-token:8787
+}
+

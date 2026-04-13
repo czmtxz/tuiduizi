@@ -1,0 +1,27 @@
+services:
+  livekit:
+    image: livekit/livekit-server:v1.8.4
+    restart: unless-stopped
+    command: ["--dev", "--bind", "0.0.0.0"]
+    environment:
+      LIVEKIT_USE_EXTERNAL_IP: "true"
+      LIVEKIT_WEBRTC_IP: "192.168.31.86"
+      LIVEKIT_LOG_LEVEL: "debug"
+    ports:
+      - "7880:7880"
+      - "7881:7881"
+      - "7882:7882/udp"
+
+  voice-token:
+    build:
+      context: ./token-service
+    restart: unless-stopped
+    environment:
+      PORT: "8787"
+      SUPABASE_URL: ${SUPABASE_URL}
+      SUPABASE_ANON_KEY: ${SUPABASE_ANON_KEY}
+      LIVEKIT_API_KEY: ${LIVEKIT_API_KEY}
+      LIVEKIT_API_SECRET: ${LIVEKIT_API_SECRET}
+    ports:
+      - "8787:8787"
+
